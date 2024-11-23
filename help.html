@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Karpom Karpippom</title>
+  <link rel="icon" href="logo1.png"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <img src="logo.png" alt="Maatram Foundation Logo"/>
+    <h1 class="title">Karpom Karpippom</h1>
+    <a href="aboutus.html">About Us</a>
+    <a href="help.html">Help</a>
+    <button id="login-btn">Login</b>
+  </nav>
+  <hr>
+<!-- Login Form Popup -->
+  <div id="login-form" class="popup-form">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div class="role-selection">
+        <h2 id="student-header" onclick="showStudentForm()">Student</h2>
+        <h2 id="tutor-header" onclick="showTutorForm()">Tutor</h2>
+      </div>
+      <!-- Student Login Form -->
+      <form id="student-form" class="login-form">
+        <input type="text" placeholder="Student Username" required>
+        <input type="password" placeholder="Password" minlength="8" required>
+        <button type="submit">Log In</button>
+      </form>
+      <!-- Tutor Login Form -->
+      <form id="tutor-form" class="login-form hidden">
+        <input type="text" placeholder="Tutor Username" required>
+        <input type="password" placeholder="Password" minlength="8" required>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="new.js"></script>
+
+</body>
+</html>

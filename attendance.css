@@ -1,0 +1,304 @@
+/* Basic styling */
+body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    nav img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav h1 {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #toggle-button {
+      cursor: pointer;
+      font-size: 1.5em;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: white;
+      transition: left 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar #sidebar-close {
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      text-align: right;
+      display: none;
+    }
+    .sidebar.active #sidebar-close {
+  display: block;
+}
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px;
+      border-bottom: 1px solid #444;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar ul li a i {
+      margin-right: 10px;
+    }
+
+    .flexbox-header {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background: #f0f0f0;
+      border-radius: 8px;
+    }
+
+    .flexbox-header h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .flexbox-header hr {
+      border: 0;
+      height: 1px;
+      background: #ccc;
+      margin: 8px 0;
+    }
+
+    .flexbox-header .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 1em;
+    }
+
+    .date, .time, .batch {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .flexbox-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .table-header, .table-row {
+      display: flex;
+      padding: 10px;
+      background: #f7f7f7;
+    }
+
+    .table-header div, .table-row div {
+      flex: 1;
+      text-align: left;
+    }
+
+    .table-header {
+      font-weight: bold;
+      background: #eaeaea;
+    }
+
+    .table-row:nth-child(even) {
+      background: #f2f2f2;
+    }
+
+    .submit-button {
+      padding: 10px;
+      background: blue;
+      font-weight: 600;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      align-self: flex-start;
+    }
+
+
+.flexbox-header,
+.flexbox-content {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Flexbox header styling */
+.flexbox-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.flexbox-header .row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.flexbox-header label {
+  font-weight: bold;
+}
+
+.flexbox-header input,
+.flexbox-header select {
+  padding: 5px;
+  font-size: 1em;
+}
+
+  /* Other existing styles */
+
+  .flexbox-content {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid white; /* Outer border */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .table-header{
+    display: flex;
+    padding: 10px;
+    background: #f7f7f7;
+    border-bottom: 1px solid white; /* White border for each row */
+  }
+
+  .table-header div{
+    flex: 1;
+    text-align: left; /* Align content to the left */
+    padding-left: 10px; /* Add some padding for better spacing */
+  }
+  
+  .table-row {
+  display: flex;
+  text-align: left; /* Ensures content aligns properly */
+  padding: 10px 0; /* Reduces unnecessary spacing */
+  background: #f7f7f7;
+}
+
+.table-row div {
+  flex: 1;
+  text-align: left; /* Centers text */
+  padding: 5px; /* Optimized spacing */
+}
+
+  .table-header {
+    font-weight: bold;
+    background: #eaeaea;
+  }
+
+  .table-row:nth-child(even) {
+    background: #f2f2f2;
+  }
+
+  .table-row div:last-child {
+    text-align: left; 
+  }
+
+
+/* Submit button */
+.submit-button {
+  display: block;
+  width: 100px;
+  padding: 10px;
+  margin-left:auto;
+  position: relative;
+  right: 40px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: blue;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 600px) {
+  .flexbox-header .row {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .flexbox-header .row > div {
+    flex: 1;
+  }
+
+  .flexbox-content .table-header div,
+  .flexbox-content .table-row div {
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .submit-button {
+    width: auto;
+    max-width: 200px;
+    margin-left: auto;
+    position: relative;
+    right: 40px;
+  }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 992px) {
+  .flexbox-header,
+  .flexbox-content {
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .flexbox-header h2 {
+    font-size: 1.8em;
+  }
+  
+  .flexbox-content .table-header div,
+  .flexbox-content .table-row div {
+    text-align: left;
+    padding: 0 15px;
+  }
+}
