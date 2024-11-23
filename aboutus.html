@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Karpom Karpippom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="logo1.png"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <img src="logo.png" alt="Maatram Foundation Logo"/>
+    <h1 class="title">Karpom Karpippom</h1>
+    <a href="aboutus.html">About Us</a>
+    <a href="help.html">Help</a>
+    <button id="login-btn">Login</button>
+  </nav>
+  <hr>
+  
+<!-- Login Form Popup -->
+  <div id="login-form" class="popup-form">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div class="role-selection">
+        <h2 id="student-header" onclick="showStudentForm()">Student</h2>
+        <h2 id="tutor-header" onclick="showTutorForm()">Tutor</h2>
+      </div>
+      <!-- Student Login Form -->
+      <form id="student-form" class="login-form">
+        <input type="text" placeholder="Student Username" required>
+        <input type="password" placeholder="Password" minlength="8" required>
+        <button type="submit">Log In</button>
+      </form>
+      <!-- Tutor Login Form -->
+      <form id="tutor-form" class="login-form hidden">
+        <input type="text" placeholder="Tutor Username" required>
+        <input type="password" placeholder="Password" minlength="8" required>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="new.js"></script>
+  <h2 class="subtitle">About Us</h2>
+  <br>
+  <div class="aboutus">
+    <p>
+      This project aims to identify aspiring students from economically deprived backgrounds and tutor them to excel in their Board exams. Over the years during the admission process of Maatram Foundation, it was noticed that many young students have found it difficult to score high marks because of lack of teachers, lack of infrastructure and in many cases the domestic conditions in their houses. Through this project we want to bridge that gap by identifying such students and tutoring them through the alumni volunteers. This will not only help them in doing their board exams well but also give them an opportunity to pursue their higher studies through Maatram Foundation. This entire initiative is program managed by the Maatram Alumni Association.
+      <br><br>
+      <span>இந்த திட்டத்தில் நோக்கம் பொருளாதார ரீதியாக பின்தங்கிய பின்னணி கொண்ட திறமையான மாணவர்களை அடையாளம் காண்பது மற்றும் அவர்களை தேர்வில் சிறப்பாக மதிப்பெண் பெறத் தேவையான பயிற்சியை வழங்குவது ஆகும். மாற்றம் அறக்கட்டளை செல்வாக்கு மாணவர்களை தேர்வு செய்யும் பிரவேசத்திலேயே, ஆசிரியர்கள் மற்றும் அடிப்படை வசதிகளின் குறைபாடு, வீட்டு சூழல் போன்ற காரணங்களால் பல மாணவர்கள் உயர்ந்த மதிப்பெண்களைப் பெறுவதில் சிரமம் அடைந்ததை கவனிக்க முடிந்தது. இந்த திட்டத்தின் மூலம், அத்தகைய மாணவர்களை அடையாளம் கண்டறிந்து, மாற்றம் முன்னாள் மாணவர்கள் மூலம் அவர்களுக்கு பயிற்சி அளித்து, தேர்வுகளில் சிறந்த மதிப்புகளை பெற உதவ விரும்புகிறோம். இது அவர்களுக்கு உயர்கல்வி தேர்விற்கான வாய்ப்புகளையும் வழங்கும். இந்த முயற்சியை முழுவதுமாக மாற்றம் முன்னால் மாணவர்கள் சங்கம் நடத்தி வருகிறது.</span>
+    </p>
+  </div>
+  <br><br><br>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: enquiry@maatramfoundation.com</p>
+        <p>Phone: +91 9551014389 /8925927943 /044 47963939</p>
+        <p>Address: No. 47, 7th cross street, Rengareddy Gardens, Neelangarai, Chennai - 600115</p>
+        <p>Working Hours: 9:30 AM to 6:00 PM</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100066813833460" target="_blank"><i class="fa-brands fa-facebook"></i>  Facebook</a></li>
+          <li><a href="https://www.instagram.com/maatramfoundation?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="fa-brands fa-instagram"></i>  Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/maatram-foundation/" target="_blank"><i class="fa-brands fa-linkedin"></i>  Linkedin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Karpom Karpippom. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
