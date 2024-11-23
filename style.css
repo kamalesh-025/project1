@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+.title{
+  color: white;
+  position: relative;
+  right:70px;
+}
+.subtitle{
+  text-decoration: underline;
+  margin: 10px;
+}
+img{
+  height: 70px;
+  width: 90px;
+  position: relative;
+  right:60px
+}
+nav{
+  background-color: black;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 30px;
+}
+a{
+  color:white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  position: relative;
+  right:40px;
+  transition: 0.2s;
+}
+a::after{
+  content: "";
+  position: absolute;
+ width: 0%;
+ height: 2px;
+ left: 0px;
+ bottom: -5px;
+ background-color: #FAC610;
+ transition: 0.5s linear;
+}
+a:hover:after{
+  width: 100%;
+}
+a:hover{
+  color:#FAC610;
+}
+.aboutus{
+  background-color: #FAC610;
+  font-size: 25px;
+  text-align: justify;
+  padding: 25px 20px;
+  margin:10px;
+  font-weight: 600;
+}
+span{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  font-family: "Noto Sans Tamil", sans-serif;
+  background-color: #FAC610;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+select{
+  padding:5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #FAC610;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: chocolate;
+}
+
+/* General Popup Form Styles */
+.popup-form {
+  display: none; /* Hidden by default */
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  position: relative;
+  animation: fadeIn 0.5s ease forwards;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 5px;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.role-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.role-selection h2 {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  margin: 0;
+  font-size: 18px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.role-selection h2:hover {
+  background-color: #FAC610;
+  color: white;
+}
+
+.role-selection h2.active {
+  background-color: #FAC610;
+  color: white;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #FAC610;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: orange;
+}
+
+/* Hide forms by default */
+.hidden {
+  display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Footer base styling */
+footer {
+  background-color: #282a36;
+  color: #f8f8f2;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 50px 20px;
+}
+
+.footer-column h3 {
+  border-bottom: 2px solid #6272a4;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-column p{
+  margin: 5px 0;
+  list-style: none;
+  padding-right: 30px;
+  font-size: 20px;
+}
+.footer-column ul {
+  margin: 5px 0;
+  list-style: none;
+  padding-left: 40px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  align-items: center;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Popup Form - Desktop View */
+@media (min-width: 768px) {
+  .popup-content {
+    width: 400px; /* Increase width for better visibility */
+    padding: 30px; /* Add more padding for spacious design */
+  }
+
+  .popup-content h2 {
+    font-size: 24px; /* Larger font size for headings */
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    font-size: 16px; /* Slightly larger text for inputs */
+    padding: 12px; /* Add more padding for better spacing */
+  }
+
+  .login-form button {
+    font-size: 18px; /* Larger button text */
+    padding: 12px; /* Larger button size */
+  }
+
+  .close-btn {
+    font-size: 24px; /* Larger close button */
+    top: 15px; /* Adjust position */
+    right: 25px;
+  }
+}
+
+/* Navigation Bar for Desktop */
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-between; /* Spread items for better alignment */
+    padding: 0 40px; /* Add padding for left and right */
+  }
+
+  .title {
+    font-size: 28px; /* Larger title for better emphasis */
+  }
+
+  a {
+    font-size: 18px; /* Slightly larger navigation links */
+  }
+}
+
+/* Footer for Desktop */
+@media (min-width: 768px) {
+  .footer-container {
+    display: flex; /* Keep the flex layout */
+    justify-content: space-between; /* Spread columns evenly */
+    padding: 30px 40px; /* Add padding for spacing */
+  }
+
+  .footer-column h3 {
+    font-size: 22px; /* Larger headings */
+  }
+
+  .footer-column p, .footer-column a {
+    font-size: 18px; /* Increase text size */
+  }
+}
+
+
+/* Copyright line */
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 15px;
+  color: #8b8b8b;
+  border-top: 1px solid #6272a4;
+}
+
+/* General styling */
+body {
+    font-family: Poppins,serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: right 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    z-index: 900;
+}
+
+.side-menu h2 {
+    margin-bottom: 20px;
+    color: #f1f1f1;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    gap: 15px;
+}
+
+.side-menu ul li {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.side-menu ul li:hover {
+    background-color: #777;
+}
+
+/* Toggle animation for the bars */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
